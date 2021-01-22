@@ -15,11 +15,14 @@ PhiCutoff = 3 * AtomSpacing * 1.1;
 
 T = 30;
 
-AddRectAtomicArray(10, 10, 0, 0, 0, 0, 0, T, 0);
+AddRectAtomicArray(15, 2, 0, 0, 0, 0, 0, T, 0);
 % vy0 = -sqrt(0.02*Ep/Mass1);
 % AddRectAtomicArray(4,4,0,12*AtomSpacing,0,vy0,0,T,1);
-Ep = 2;
-AddParticleStream(5, 0.1, 10, -pi / 2, 1, Ep * C.q_0, 5);
+Ep = 4;
+% AddParticleStream(5, 0.1, 10, -pi / 2, 1, Ep * C.q_0, 5);
+
+% New Function to add an arrow like structure
+AddArrowStream(6, 0, 8, -pi / 2, 1, Ep * C.q_0);
 
 Size = 10*AtomSpacing;
 Limits = [-Size +Size -Size +Size]; % square is good
